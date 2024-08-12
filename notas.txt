@@ -1,0 +1,18 @@
+https://github.com/kenerry-serain/not-so-simple-ecommerce-iac
+
+Para criar a ken
+terraform output -raw key_pair_private_key > nsse-production-key-pair.pem
+
+
+ssh -i "nsse-production-key-pair.pem" admin@i-09e773580398d626b \
+-L 5432:nsse-aurora-serverless-cluster-proxy.proxy-c3iy8ecaugju.us-east-1.rds.amazonaws.com:5432 \
+-o ProxyCommand="sh -c \"aws ssm start-session --target %h --document-name AWS-StartSSHSession --parameters 'portNumber=%p'"\"
+
+ssh -i "nsse-production-key-pair.pem" admin@i-09e773580398d626b \
+-L 192.168.15.76:5432:nsse-aurora-serverless-cluster-proxy.proxy-c3iy8ecaugju.us-east-1.rds.amazonaws.com:5432 \
+-o ProxyCommand="sh -c \"aws ssm start-session --target %h --document-name AWS-StartSSHSession --parameters 'portNumber=%p'"\"
+
+ssh -i "nsse-production-key-pair.pem" admin@i-06e255dccb028dfbd \
+-L 5432:nsse-aurora-serverless-cluster-proxy.proxy-c3iy8ecaugju.us-east-1.rds.amazonaws.com:5432 \
+-L 192.168.15.76:5432:nsse-aurora-serverless-cluster-proxy.proxy-c3iy8ecaugju.us-east-1.rds.amazonaws.com:5432 \
+-o ProxyCommand="sh -c \"aws ssm start-session --target %h --document-name AWS-StartSSHSession --parameters 'portNumber=%p'"\"

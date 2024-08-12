@@ -1,0 +1,84 @@
+[
+    {
+        "Name": "nsse-network",
+        "Id": "570e6bf819dd1facaa48bec79a8c9412bd00452bd23388a82ab498f63aa455b3",
+        "Created": "2024-07-20T11:33:56.516174744-03:00",
+        "Scope": "local",
+        "Driver": "bridge",
+        "EnableIPv6": false,
+        "IPAM": {
+            "Driver": "default",
+            "Options": null,
+            "Config": [
+                {
+                    "Subnet": "172.18.0.0/16",
+                    "Gateway": "172.18.0.1"
+                }
+            ]
+        },
+        "Internal": false,
+        "Attachable": false,
+        "Ingress": false,
+        "ConfigFrom": {
+            "Network": ""
+        },
+        "ConfigOnly": false,
+        "Containers": {
+            "18ebf4cd2f48c45afa55c91383eb7e8a463997136c45c3b76d4f1e5b0b478d8f": {
+                "Name": "nsse.main.internal",
+                "EndpointID": "63e7994fad0edc49f13037c998b5a062de657803370f9d5354c5734d486b31c8",
+                "MacAddress": "02:42:ac:12:00:09",
+                "IPv4Address": "172.18.0.9/16",
+                "IPv6Address": ""
+            },
+            "312151636fe8a679b9fd0f4c89a18875c634bf753ec94fc8812d09d586f8097b": {
+                "Name": "nsse.site.internal",
+                "EndpointID": "05c2a49a604063468d6484080249fa0d7bc6ee8474c41871027a443a6f622884",
+                "MacAddress": "02:42:ac:12:00:07",
+                "IPv4Address": "172.18.0.7/16",
+                "IPv6Address": ""
+            },
+            "42738c6fc90b4828fca38ff6d06e89ddacb3ef809518cfad9fd2ca9476545aa3": {
+                "Name": "nsse.health-checker.internal",
+                "EndpointID": "d3c7a55851ede22b53d4b9f3026b01ef774c99bbdff03e1d4476c0d129011363",
+                "MacAddress": "02:42:ac:12:00:08",
+                "IPv4Address": "172.18.0.8/16",
+                "IPv6Address": ""
+            },
+            "b76991d8f6fb71eefb74804483216426065a1c1140ed38b783c775b3364ac038": {
+                "Name": "nsse.nginx.internal",
+                "EndpointID": "297ef615a1802f98e1ad7dc20bb4bf751f90f35c0fa59bcf972e64e4781a0acd",
+                "MacAddress": "02:42:ac:12:00:02",
+                "IPv4Address": "172.18.0.2/16",
+                "IPv6Address": ""
+            },
+            "b92106f3f092b40e0f9ee0e7896b921bb4348bd623d7aa87c5560354c97a9d22": {
+                "Name": "nsse.order.internal",
+                "EndpointID": "92d9c419cd0665d345854727b80c8c5fca0e14cb5026416c568455bf9a82fec8",
+                "MacAddress": "02:42:ac:12:00:06",
+                "IPv4Address": "172.18.0.6/16",
+                "IPv6Address": ""
+            },
+            "ced2712b60bc802da0f14ab815165018a74da244fa24947bd7112bc770252a79": {
+                "Name": "nsse.identity.internal",
+                "EndpointID": "26556c618d582d2762d23c9cc7d6f538d7082bc91485604dfdbc105d41a083ce",
+                "MacAddress": "02:42:ac:12:00:04",
+                "IPv4Address": "172.18.0.4/16",
+                "IPv6Address": ""
+            },
+            "d2c50fad529a4533fbf1f35e5afe7239531d5b8b11632e74c74ebc16a46e49ca": {
+                "Name": "nsse.localstack.internal",
+                "EndpointID": "b4559a5be4ce0546622cff90489367129cfdaad047224b2afd8c47f30c2a8f3b",
+                "MacAddress": "02:42:ac:12:00:03",
+                "IPv4Address": "172.18.0.3/16",
+                "IPv6Address": ""
+            }
+        },
+        "Options": {},
+        "Labels": {
+            "com.docker.compose.network": "nsse-network",
+            "com.docker.compose.project": "nsse",
+            "com.docker.compose.version": "2.23.3"
+        }
+    }
+]
